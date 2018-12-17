@@ -1,0 +1,20 @@
+* {outline: none;}
+
+hr {border: none !important; background: #3E546D; height: 1px; padding: 0;}
+
+/* Global */
+.textcenter {text-align: center;}
+.anchor span {color: white;}
+body, .sidebar, .sidebar-toggle {background: #1D2D3F;}
+
+/* Sidebar */
+.sidebar {border-right: 1px solid #3E546D; color: white;}
+.sidebar li>p {background: #DC334A; padding: 5px 10px; font-size: 18px; margin-top: 10px;}
+.sidebar ul a {opacity: 0.6}
+.sidebar .active a, .sidebar ul a:hover, .sidebar ul a:active, .sidebar ul a:focus {opacity: 1 !important;}
+
+/* Content */
+.content blockquote {color: white;}
+.content strong {color: #78f2ff !important;}
+.content h1 {background: #DC334A; padding: 10px 20px;}
+.content img {box-shadow: 0 0 50px rgba(0,0,0,0.25)}
