@@ -83,15 +83,15 @@ Each game has a unique set of SDK credentials that help authenticate and connect
 
 Start by tapping the **Games** navigation section.
 
-![Screenshot](media/game/009.png)
+![Screenshot](media/credentials/001.png)
 
 Select your game by tapping the **Details** button
 
-![Screenshot](media/game/010.png)
+![Screenshot](media/credentials/002.png)
 
 Generate your Developement and Production SDK keys from the section picture below.
 
-![Screenshot](media/game/011.png)
+![Screenshot](media/credentials/003.png)
 
 !> You'll need these credentials when integrate your game in Unity or other platforms
 
@@ -99,7 +99,9 @@ Generate your Developement and Production SDK keys from the section picture belo
 
 ## Create a Tournament
 
-Create a tournament for your game. This includes large variety of configurable options.
+Start by selecting your game, tap the **Tournament** tab along the top of the screen, then select **Create New**
+
+![Screenshot](media/tournament/000.png)
 
 #### 1. Core Settings
 
