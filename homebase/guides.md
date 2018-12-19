@@ -34,10 +34,40 @@ Once you have created a test tournament, return to the Game Details page and tap
 
 ## Monitoring Tournaments
 
-...coming soon...
+#### 1. Select Your Game
+
+Select your game by tapping the **Details** button
+
+![Screenshot](media/monitor/001.png)
+
+#### 2. Select a Tournament
+
+Find your tournament in the list of active tournaments and select **View Details**
+
+![Screenshot](media/monitor/002.png)
+
+#### 3. Review a Tournament
+
+On this page you can see live tournament information, including the leaderboard standings.
+
+![Screenshot](media/monitor/003.png)
 
 ---
 
-## Managing Account Funds
+## Managing Account and Funds
 
-...coming soon...
+### Manage Account Information
+
+The Account section is where you can see and edit the details for your point of contact, studio, and payment methods.
+
+![Screenshot](media/account/001.png)
+
+### Deposit, Withdraw, and More
+
+Start by tapping the **View** button on the left side of the page. 
+
+![Screenshot](media/account/002.png)
+
+The Balance section is where you can add or withdraw funds from your account. You also have visibility into transaction history and what your recent earnings have been.
+
+![Screenshot](media/account/003.png)

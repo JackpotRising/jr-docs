@@ -8,19 +8,20 @@
     - Guides
         - [Submit Game for Review](homebase/guides?id=submit-game-for-review)
         - [Monitoring Tournaments](homebase/guides?id=monitor-tournaments)
-        - [Managing Account Funds](homebase/guides?id=managing-account-funds)
+        - [Managing Account Funds](homebase/guides?id=managing-account-and-funds)
 
 - Unity SDK Integration
 
-    - Requirements
-        - [Software Requirements](foo)
-        - [Game Randomization](foo)
+    - [Requirements](unity/requirements?id=requirements)
     - Integration
-        - [Install the SDK Plugin](foo)
-        - [Submitting a a Score](foo)
-        - [Build for iOS](foo)
-        - [Build for Android](foo)
+        - [Install the SDK Plugin](unity/integration?id=install-the-sdk-plugin)
+        - [Trigger the SDK](unity/integration?id=trigger-the-sdk)
+        - [Make an Attempt](unity/integration?id=make-an-attempt)
+        - [Submitting a Score](unity/integration?id=submitting-a-score)
+        - [Build for iOS](unity/integration?id=build-for-ios)
+        - [Build for Android](unity/integration?id=build-for-android)
     - Guides
+        - [Game Randomization](unity/guides?id=game-randomization)
         - [Tournament Parameters](foo)
         - [Ad Supported Tournaments](foo)
 
