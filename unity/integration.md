@@ -4,29 +4,27 @@
 
 #### 1. Download the Plugin
 
-Download: [Jackpot Rising SDK Plugin](https://sdk.jackpotrising.com/JackpotRising-3.5.0-Release.unitypackage)
+[Download the Latest Version Here](https://sdk.jackpotrising.com/JackpotRising-3.5.0-Release.unitypackage)
 
 ![Screenshot](media/plugin/001.png)
 
 #### 2. Install the Plugin
 
-Drag the .package file into your root Assets section within Unity. When presented with the import screen, leave everything default and press **Import*.
+Drag the .package file into your root Assets section within Unity. When presented with the import screen, leave everything default and press **Import**.
 
 ![Screenshot](media/plugin/003.png)
 
-Once imported, this will create a Plugins folder for you.
+Once imported, you'll see a new Plugins folder in your Unity project, including the following:
 
 ![Screenshot](media/plugin/002.png)
 
-**This Includes**
-
 - Everything you need to connect your game logic to the Jackpot Rising platform
-- A new SDK Configuration window, found at **Windows > Jackpot Rising > Edit Settings**
-- **Plugins > JackpotRising > Buttons** contains a stock UI button you may use for triggering the SDK
+- A new SDK Configuration window, found at *Windows > Jackpot Rising > Edit Settings*
+- *Plugins > JackpotRising > Buttons* contains a stock UI button you may use for triggering the SDK
 
 #### 3. Add the 'JackpotRising' Prefab to Your Scene
 
-Drag the Jackpot Rising prefab, found under **Plugins > JackpotRising**, into your Unity project scene.
+Drag the `JackpotRising` prefab, found under **Plugins > JackpotRising**, into your Unity project scene.
 
 ?> Note: The prefab will keep itself active between scenes while automatically initializing the SDK for you.
 
@@ -40,13 +38,15 @@ Browse to **Windows > Jackpot Rising > Edit Settings** to view the SDK configura
 
 ![Screenshot](media/plugin/005.png)
 
-- The **Developer Dashboard button** will take you to [Homebase](https://homebase.jackpotrising.com 'target:_blank')
-- The **Documentation button** will take you to this documentation website.
-- **Developer/Production Client ID and Secret** will be covered in the SDK Credentials section below.
-- Three debug checkboxes are present. **Hover over the (?) mark** for more details.
-- You can simulate tournament parameters using the **Simulate Key/Value parameters** section  
+**Features**
 
-#### 4. Enter your SDK Credentials
+- The *Developer Dashboard button* will open [Homebase](https://homebase.jackpotrising.com 'target:_blank')
+- The *Documentation button* will open this documentation website.
+- *Developer/Production Client ID and Secret* will be covered in the 'Enter SDK Credentials' section below.
+- Three debug checkboxes are present. *Hover over the (?) mark* for more details.
+- You can simulate tournament parameters using the *Simulate Key/Value parameters* section  
+
+#### 4. Enter SDK Credentials
 
 For full instructions see [Generate SDK credentials](homebase/integration?id=generate-sdk-credentials)
 
@@ -56,13 +56,13 @@ For full instructions see [Generate SDK credentials](homebase/integration?id=gen
 
 !> Ensure you have an active tournament running. See [Create a Tournament](homebase/integration?id=create-a-tournament) for details.
 
-#### 1. Add the Trigger UI
+#### 1. Add a Trigger UI Button
 
 In order the display the Jackpot Rising SDK UI, we'll need an on-screen button within your game. We recommend adding this to your main menu.
 
 ![Screenshot](media/trigger/001.png)
 
-> This button is included under: **Plugins > JackpotRising > Buttons**
+> A high resolution version of this button can be found in **Plugins > JackpotRising > Buttons**, but feel free to create your own that matches your game aesthetic
 
 Call the following to trigger the SDK UI to show:
 
