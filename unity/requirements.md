@@ -6,7 +6,7 @@ Please ensure you've completed entire [Homebase Integration](homebase/integratio
 
 ## Game Randomization Compliance
 
-Please ensure you're familiar with game randomization compliance via: [Game Randomization](unity/guides?id=game-andomization)
+Please ensure your [Game Randomization](unity/guides?id=game-andomization) meets our required compliance
 
 ## Unity
 
@@ -19,14 +19,14 @@ Please ensure you're familiar with game randomization compliance via: [Game Rand
 ## For iOS Builds
 
 - Xcode (Latest Version)
+- Test device running iOS version 9.1+ -or- the Xcode Simulator
 - [Cocoapods](https://cocoapods.org/ 'target:_blank') (Latest Version)
-- Test device running iOS version 9.1+ or the Xcode Simulator
 
 > CocoaPods is a dependency manager for Swift and Objective-C Cocoa projects
 
 ## For Android Builds (Coming Soon!)
 
-!> Jackpot Rising for Android is still in developement. Please check back soon.
+?> Jackpot Rising for Android is still in developement. Please check back soon.
 
-- Android Studio 3.2+
-- Test device running Android API 19 (Kit Kat) or greater
+<!-- - Android Studio 3.2+ -->
+<!-- - Test device running Android API 19 (Kit Kat) or greater -->

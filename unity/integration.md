@@ -2,6 +2,8 @@
 
 ## Install the SDK Plugin
 
+!> Please ensure you've reviewed the [Requirements](unity/requirements?id=requirements) section before you begin
+
 #### 1. Download the Plugin
 
 Download the latest version here: [Unity SDK Integration > Requirements](unity/requirements)
@@ -14,23 +16,25 @@ Drag the downloaded .package file into your root Assets directory within Unity. 
 
 ![Screenshot](media/plugin/003.png)
 
-Once imported, you'll see a new Plugins directory in your Unity project. Contents of this plugin are detailed below.
+Once imported, you'll see a new Plugins directory in your Unity project.
 
 ![Screenshot](media/plugin/002.png)
 
+This includes:
+
 - Everything you need to connect your game logic to the Jackpot Rising platform
-- A new SDK Configuration window, found at *Windows > Jackpot Rising > Edit Settings*
-- *Plugins > JackpotRising > Buttons* contains a stock UI button you may use for triggering the SDK
+- SDK Configuration panel in *Files Menu > Windows > Jackpot Rising > Edit Settings*
+- *Plugins > JackpotRising > Buttons* contains a UI sprite you may use when triggering the SDK
 
 #### 3. Add the 'JackpotRising' Prefab to Your Scene
 
 Drag the `JackpotRising` prefab, found under **Plugins > JackpotRising**, into your Unity project scene.
 
-?> Note: The prefab will keep itself active between scenes while automatically initializing the SDK for you.
+?> The prefab will be instantiated as a [singleton](http://wiki.unity3d.com/index.php/Singleton 'target:_blank') and automatically initializing the SDK
 
 ![Screenshot](media/plugin/004.png)
 
-!> This prefab is required for iOS builds due to how communication works between Unity and iOS.
+> The prefab is required for iOS builds due to how communication works between Unity and iOS.
 
 #### 4. Configure the Plugin
 
@@ -40,23 +44,21 @@ Browse to **Windows > Jackpot Rising > Edit Settings** to view the SDK configura
 
 **Options Include**
 
-- The *Developer Dashboard button* will open [Homebase](https://homebase.jackpotrising.com 'target:_blank')
-- The *Documentation button* will open this documentation website.
-- *Developer/Production Client ID and Secret* will be covered in the 'Enter SDK Credentials' step below.
-- *Hover over the (?) mark* for more details on each checkbox option.
-- You may simulate tournament parameters using *Simulate Key/Value parameters*  
+- Developer Dashboard: lauches [Homebase](https://homebase.jackpotrising.com 'target:_blank')
+- Documentation: launches this documentation site
+- Developer/Production Client ID and Secret: are covered in the 'Enter SDK Credentials' step below
+- Checkbox Options: Hover over the (?) mark for more details. Tap the Production option when you're ready for release.
+- Simulate Key/Value parameters : simulates [Tournament Parameters](unity/guides?id=tournament-parameters) 
 
 #### 5. Enter SDK Credentials
 
-If you do not already have your SDK credentials available, please see the instructions here: [Generate SDK credentials](homebase/integration?id=generate-sdk-credentials)
+?> See [Generate SDK credentials](homebase/integration?id=generate-sdk-credentials) for details.
 
 ---
 
 ## Trigger the SDK
 
 !> Ensure you have an active tournament running. See [Create a Tournament](homebase/integration?id=create-a-tournament) for details.
-
-#### 1. Add a Trigger UI Button
 
 In order the display the Jackpot Rising SDK UI, we'll need an on-screen button within your game. We recommend adding this to your main menu.
 
@@ -70,9 +72,21 @@ When pressed, the button should trigger the following call. This will trigger th
 JackpotRising.Show();
 ```
 
-#### 2. Implement a Tournament Listener
+---
 
-Most games utilize a 'GameManger' script to handle core gameplay logic shared throughout the scope of the game. We recommend follow the example script below for implementing a Tournament Listener (aka Contest Listener). Note the class injects `JackpotRising.ContestListener` in addition to the standard `MonoBehaviour`. Key features have been documented within the script below.
+## The Tournament Listener
+
+Most games utilize a custom 'GameManger' script to handle core gameplay logic shared throughout the scope of the game. This is a great place to implement your Tournament Listener (aka Contest Listener). This provides direct access to the bulk of the SDK functionality.
+
+Note the class injects `JackpotRising.ContestListener` in addition to the standard `MonoBehaviour`.
+
+```csharp
+public class MyGameScript : MonoBehaviour, JackpotRising.ContestListener {
+    // ...
+}
+```
+
+Key SDK features have been documented within the example GameManger script below:
 
 ```csharp
 using UnityEngine;
@@ -107,31 +121,34 @@ public class MyGameScript : MonoBehaviour, JackpotRising.ContestListener {
         // ...
     }
    
+    // Insert custom game logic here
     void OnStartGameplay() {
-        // Insert custom game logic here
+        // ...
     }
 }
 ```
 
 Please note that when the **Trigger Button** and **ContestListener** are in place you may encounter a slightly different experience depending on where you play:
 
-* Unity Preview: You will see a barebones UI that allows you trigger key methods. This includes making an attempt.
-* On iOS or Android devices: you will see the full SDK Overlay UI. An example is shown below.
+* Unity editor game preview: presents a barebones UI that allows you to test SDK features.
+* On iOS or Android devices: presents the full SDK Overlay UI. An example is shown below.
 
 ![Screenshot](media/trigger/002.png)
 
-?> Your UI may differ slightly
+> We're always actively deploying new updates to the SDK and UI, so this may differ slightly for your game.
 
 ---
 
-## Make an Attempt
+## Attempts and Scores
 
-The following script highlights the `StartTournament()` method used to trigger an attempt. Note the Randomization Seed and Tournament Parameters are made available before gameplay starts.
+#### 1. Make an Attempt
+
+The following script highlights the `StartTournament()` method used to trigger an attempt. Note the randomization method and tournament parameters are made available before gameplay starts.
 
 ```csharp
 public void StartTournament(long tournamentID, JackpotRising.KeyValues keyvalues)
 {
-    // You can use the ID for other things if you want
+    // The Tournament ID can be use anywhere within your game
     JackpotRising.SetRandomSeed(tournamentID);
 
     // Handle tournament parameter data here.
@@ -139,8 +156,7 @@ public void StartTournament(long tournamentID, JackpotRising.KeyValues keyvalues
     GameEventsManager.levelName = keyvalues.GetString("name");
     GameEventsManager.speed = keyvalues.GetFloat("gameSpeed");
     
-    // Handle any tournament-specific logic here
-    GameEventsManager.contestStarted = true;
+    // Handle any game specific logic here (change scenes, etc)
     OnStartGameplay();
 }
 ```
@@ -149,11 +165,9 @@ public void StartTournament(long tournamentID, JackpotRising.KeyValues keyvalues
 
 ?> For more information regarding Key/Value parameters see: [Tournament Parameters](unity/guides?id=tournament-parameters)
 
----
+#### 2. Submit a Score
 
-## Submit a Score
-
-After a gameplay session has ended, you will need to submit the final score to Jackpot Rising through the following method:
+After a gameplay, submit the score via the `JackpotRising.SubmitScore()` method:
 
 ```csharp
 JackpotRising.SubmitScore(long score);
@@ -167,25 +181,25 @@ JackpotRising.SubmitScore(long score);
 
 #### 1. Set Build Target to iOS
 
-Open **File > Build Settings** then select iOS, then tap the Switch Platform button.
+Open **File > Build Settings**, select iOS, then tap the Switch Platform button.
 
 ![Screenshot](media/build-ios/001.png)
 
 #### 2. Location Text
 
-Under Build Settings **File > Build Settings > Player Settings > Other Settings > Location Usage Description** add the following text:
+Open **File > Build Settings > Player Settings > Other Settings > Location Usage Description** add the following text:
 
 > Location required to compete in Jackpot Rising Tournaments
 
 ![Screenshot](media/build-ios/002.png)
 
-This message will be used when prompting for the location persmission, which is required for Jackpot Rising.
+This message will be used when prompting for the location persmission, which is required for geofencing Jackpot Rising tournaments.
 
 #### 3. Ensure Cocopods is Installed
 
-During the build process we'll utilize Cocopods to install some required resources in your Xcode project. This includes the ios native SDK Overlay UI.
+During the build process we'll utilize Cocopods to install some required resources in your Xcode project. This includes the iOS native SDK Overlay UI.
 
-!> [Instructions for installing Cocoapods can be found here](https://cocoapods.org/ 'target:_blank')
+?> See the [Cocoapods website](https://cocoapods.org/ 'target:_blank') for installation intructions
 
 Enter the following in your terminal to verify Cocopods is installed. If successful a version number will be returned:
 
@@ -193,27 +207,29 @@ Enter the following in your terminal to verify Cocopods is installed. If success
 pod --version
 ```
 
-#### 3. Build Xcode Project
+#### 4. Build Xcode Project
 
 Tap the Build button and select a destination for your Xcode project.
 
-During each build process you will see a terminal window open automatically. This is Cocopods installing the required resources. Once complete the Xcode project will open automatically for you. Otherwise double-click 'Unity-iPhone.xcodeproj'.
+> During each build process you will see a terminal window open automatically. This is Cocopods installing the required resources. Once complete the Xcode project will open automatically for you. Otherwise double-click 'Unity-iPhone.xcodeproj'.
 
 ![Screenshot](media/build-ios/003.png)
 
-?> You may close the new terminal window at this time.
+?> You may close the terminal window Cocopods opened at this time.
 
 
-#### 4. Build to Test Device
+#### 5. Build to Test Device
 
-Once the Xcode project is open, assuming you have already setup all required Apple Developer provisioning, you can either build for a physical iOS device or the Simulator. To do this, select your device and tap the Build and Run option near the top-left of the screen.
+!> Please ensure all required Apple Developer provisioning is setup before you proceed
+
+Once the Xcode project is open, you can either build for a physical iOS device or the Simulator. To do this, select your device and tap the Build and Run option near the top-left of the screen.
 
 ![Screenshot](media/build-ios/004.png)
 
-Assuming you've followed all instructions, the SDK should be fully functional within your game.
+Assuming you've followed all instructions, the SDK should be fully functional within your game. If you encounter any issues please contact [Developer Support](/)
 
 ---
 
 ## Build for Android
 
-!> Jackpot Rising for Android is still in developement. Please check back soon.
+?> Jackpot Rising for Android is still in developement. Please check back soon.

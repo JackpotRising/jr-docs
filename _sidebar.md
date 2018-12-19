@@ -7,7 +7,7 @@
         - [Create a Tournament](homebase/integration?id=create-a-tournament)
     - Guides
         - [Submit Game for Review](homebase/guides?id=submit-game-for-review)
-        - [Monitoring Tournaments](homebase/guides?id=monitor-tournaments)
+        - [Monitoring Tournaments](homebase/guides?id=monitoring-tournaments)
         - [Managing Account Funds](homebase/guides?id=managing-account-and-funds)
 
 - Unity SDK Integration
@@ -16,8 +16,8 @@
     - Integration
         - [Install the SDK Plugin](unity/integration?id=install-the-sdk-plugin)
         - [Trigger the SDK](unity/integration?id=trigger-the-sdk)
-        - [Make an Attempt](unity/integration?id=make-an-attempt)
-        - [Submit a Score](unity/integration?id=submit-a-score)
+        - [The Tournament Listener](unity/integration?id=the-tournament-listener)
+        - [Attempts and Scores](unity/integration?id=attempts-and-scores)
         - [Build for iOS](unity/integration?id=build-for-ios)
         - [Build for Android](unity/integration?id=build-for-android)
     - Guides

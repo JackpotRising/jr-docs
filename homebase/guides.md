@@ -2,6 +2,8 @@
 
 ## Submit Game for Review
 
+All games using the Jackpot Rising platform must be approved by a member of our staff. Approval times can vary, but can usually be vereid within 24 hours.
+
 !> The test build that you submit to Jackpot Rising for approval must be the same version (i.e 1.0 or 1.1) as the production build that you are submitting to Apple.
 
 #### 1. Select Your Game
@@ -28,7 +30,9 @@ Once you have created a test tournament, return to the Game Details page and tap
 
 1. Select the platform(s) that you will be submitting for the game.
 2. Provide the version number and app details for the build that you are submitting.
-3. Send an internal tester invitation through Testflight or Hockeyapp to developer@jackpotrising.com
+3. For iOS: Send an invitation through Testflight or Hockeyapp to developer@jackpotrising.com
+
+> Your point of contact (set within Homebase > Account) will be notified if your game is approved or denied. If denied, a reason will be provided. If accepted, the game will then appear in the Jackpot Rising games library.
 
 ---
 
@@ -42,13 +46,13 @@ Select your game by tapping the **Details** button
 
 #### 2. Select a Tournament
 
-Find your tournament in the list of active tournaments and select **View Details**
+Find your tournament in the list of active, recurring, or archived tournaments. Then tap the **View Details** button.
 
 ![Screenshot](media/monitor/002.png)
 
 #### 3. Review a Tournament
 
-On this page you can see live tournament information, including the leaderboard standings.
+On this page you can view live tournament information, including the leaderboard standings (not pictured).
 
 ![Screenshot](media/monitor/003.png)
 
@@ -58,7 +62,7 @@ On this page you can see live tournament information, including the leaderboard 
 
 ### Manage Account Information
 
-The Account section is where you can see and edit the details for your point of contact, studio, and payment methods.
+The Account section is where you can view and edit the details for your point of contact, studio, and payment methods.
 
 ![Screenshot](media/account/001.png)
 
@@ -68,6 +72,6 @@ Start by tapping the **View** button on the left side of the page.
 
 ![Screenshot](media/account/002.png)
 
-The Balance section is where you can add or withdraw funds from your account. You also have visibility into transaction history and what your recent earnings have been.
+Here you may add or withdraw funds from your account and view a transaction history and recent earnings.
 
 ![Screenshot](media/account/003.png)
