@@ -9,13 +9,15 @@ This serves as the technical documentation for the Jackpot Rising platform.
 
 **Recommended**
 * Clone the project from the repo
-* Open the root directory of the project: `cd jr-docs`
+* Browse to the project directory: `cd jr-docs/docs`
 * Run via Python Simple HTTP Server: `python -m SimpleHTTPServer 3000`
 * Point your browser towards: `http://localhost:3000/`
 
 *Optionally*
 * [Install and use the Docsify CLI](https://github.com/docsifyjs/docsify-cli) (include auto-refresh)
+* Run via `docsify serve ./docs`
+* Point your browser towards: `http://localhost:3000/`
 
 ## Support
 
-Contact chris@jackpotrising.com for further support.
+Contact support@jackpotrising.com for further support.
