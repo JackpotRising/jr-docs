@@ -4,6 +4,10 @@
 
 Please ensure you've completed entire [Homebase Integration](homebase/integration) process before you begin.
 
+## Game Randomization Compliance
+
+Please ensure you're familiar with game randomization compliance via: [Game Randomization](unity/guides?id=game-andomization)
+
 ## Unity
 
 - Unity version 5.6.6 or greater

@@ -96,8 +96,7 @@ public class MyGameScript : MonoBehaviour, JackpotRising.ContestListener {
     // (OPTIONAL) Callback when the Jackpot Rising window is closed with the X button or tournament offer is declined. Unity resumes control of the application when this happens.
     public void OnClosedSDK(){}
   
-    // (OPTIONAL) Callback when player is entering an ad-supported tournament (configured on the Developer Dashboard for your tournament)
-    // and doesn't have any free attempts left. This signals for you to start an ad, and after it finishes respond with JackpotRising.SubmitAdSuccess(bool) with the state of true or false depending on if the ad was successfully played and rewarded the player with attempts. 
+    // (OPTIONAL) Callback when a player is entering an ad-supported tournament (configured within your tournament settings on Homebase) and doesn't have any attempts remaining. This signals for you to start an ad, and after it finishes respond with JackpotRising.SubmitAdSuccess(bool) with the state of true or false depending on if the ad was successfully played and rewarded the player with attempts. 
     public void PlayAd(){}
 
     // (OPTIONAL) Callback with a message as to why the SDK failed to initialize
@@ -135,22 +134,18 @@ public void StartTournament(long tournamentID, JackpotRising.KeyValues keyvalues
     // You can use the ID for other things if you want
     JackpotRising.SetRandomSeed(tournamentID);
 
-    // Handle Extra Fields tournament data here. This information can be unique for each
-    // tournament, allowing flexibility for different levels/modes/attributes between
-    // different tournaments.
+    // Handle tournament parameter data here.
     GameEventsManager.level = keyvalues.GetInt("level");
     GameEventsManager.levelName = keyvalues.GetString("name");
     GameEventsManager.speed = keyvalues.GetFloat("gameSpeed");
+    
+    // Handle any tournament-specific logic here
     GameEventsManager.contestStarted = true;
-
-    // Handle any tournament-specific logic that you may want to differ for tournaments
-    // in your game. This is just a quick example, so outside of the
-    // ContestListener you can do what works best for your project
     OnStartGameplay();
 }
 ```
 
-?> For more information regarding Randomization Seeds see: [Game Randomization](unity/guides?id=game-andomization)
+?> For more information regarding randomization see: [Game Randomization](unity/guides?id=game-andomization)
 
 ?> For more information regarding Key/Value parameters see: [Tournament Parameters](unity/guides?id=tournament-parameters)
 
@@ -161,10 +156,8 @@ public void StartTournament(long tournamentID, JackpotRising.KeyValues keyvalues
 After a gameplay session has ended, you will need to submit the final score to Jackpot Rising through the following method:
 
 ```csharp
-JackpotRising.SubmitScore(score);
+JackpotRising.SubmitScore(long score);
 ```
-
-?> Ensure 'scores' is of type ['long'](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/long 'target:_blank')
 
 ---
 
