@@ -17,13 +17,13 @@
         - [Install the SDK Plugin](unity/integration?id=install-the-sdk-plugin)
         - [Trigger the SDK](unity/integration?id=trigger-the-sdk)
         - [Make an Attempt](unity/integration?id=make-an-attempt)
-        - [Submitting a Score](unity/integration?id=submitting-a-score)
+        - [Submit a Score](unity/integration?id=submit-a-score)
         - [Build for iOS](unity/integration?id=build-for-ios)
         - [Build for Android](unity/integration?id=build-for-android)
     - Guides
-        - [Game Randomization](unity/guides?id=game-randomization)
-        - [Tournament Parameters](foo)
-        - [Ad Supported Tournaments](foo)
+        - [Game Randomization](unity/guides?id=game-andomization)
+        - [Tournament Parameters](unity/guides?id=tournament-parameters)
+        - [Ad Supported Tournaments](unity/guides?id=ad-supported-tournaments)
 
 <!--
 - Unreal SDK Integration
