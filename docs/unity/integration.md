@@ -6,13 +6,13 @@
 
 #### 1. Download the Plugin
 
-Download the latest version here: [Unity SDK Integration > Requirements](unity/requirements)
+Download the latest version from the [Requirements](unity/requirements?id=requirements) section
 
 ![Screenshot](media/plugin/001.png)
 
 #### 2. Install the Plugin
 
-Drag the downloaded .package file into your root Assets directory within Unity. When presented with the import screen, leave everything default and press **Import**.
+Drag the .package file into your root Assets directory within Unity. Leave everything default and press **Import**.
 
 ![Screenshot](media/plugin/003.png)
 
@@ -20,15 +20,15 @@ Once imported, you'll see a new Plugins directory in your Unity project.
 
 ![Screenshot](media/plugin/002.png)
 
-This includes:
+Plugins > Jackpot Rising includes:
 
-- Everything you need to connect your game logic to the Jackpot Rising platform
+- Full access to the Jackpot Rising SDK within your C# game scripts
 - SDK Configuration panel in *Files Menu > Windows > Jackpot Rising > Edit Settings*
 - *Plugins > JackpotRising > Buttons* contains a UI sprite you may use when triggering the SDK
 
 #### 3. Add the 'JackpotRising' Prefab to Your Scene
 
-Drag the `JackpotRising` prefab, found under **Plugins > JackpotRising**, into your Unity project scene.
+Find the `JackpotRising` prefab from **Plugins > JackpotRising**, then drag it to your Unity project scene.
 
 ?> The prefab will be instantiated as a [singleton](http://wiki.unity3d.com/index.php/Singleton 'target:_blank') and automatically initializing the SDK
 
@@ -46,13 +46,15 @@ Browse to **Windows > Jackpot Rising > Edit Settings** to view the SDK configura
 
 - Developer Dashboard: lauches [Homebase](https://homebase.jackpotrising.com 'target:_blank')
 - Documentation: launches this documentation site
-- Developer/Production Client ID and Secret: are covered in the 'Enter SDK Credentials' step below
+- Developer/Production Client ID and Secret: these are covered in the 'Enter SDK Credentials' step below
 - Checkbox Options: Hover over the (?) mark for more details. Tap the Production option when you're ready for release.
 - Simulate Key/Value parameters : simulates [Tournament Parameters](unity/guides?id=tournament-parameters) 
 
 #### 5. Enter SDK Credentials
 
-?> See [Generate SDK credentials](homebase/integration?id=generate-sdk-credentials) for details.
+?> See [Generate SDK credentials](homebase/integration?id=generate-sdk-credentials) for full instructions on retreiving these.
+
+Tap the **Save** button to complete this process.
 
 ---
 
@@ -60,11 +62,11 @@ Browse to **Windows > Jackpot Rising > Edit Settings** to view the SDK configura
 
 !> Ensure you have an active tournament running. See [Create a Tournament](homebase/integration?id=create-a-tournament) for details.
 
-In order the display the Jackpot Rising SDK UI, we'll need an on-screen button within your game. We recommend adding this to your main menu.
+In order the display the Jackpot Rising SDK UI you will need to add an on-screen button. We recommend adding this to your game's main menu.
 
 ![Screenshot](media/trigger/001.png)
 
-> A high resolution version of this button can be found in **Plugins > JackpotRising > Buttons**, but feel free to create a custom button that matches your game's theme
+> A high resolution version of this button can be found in **Plugins > JackpotRising > Buttons**. Though feel free to create a custom button that matches your game's theme
 
 When pressed, the button should trigger the following call. This will trigger the SDK Overlay UI to display:
 
@@ -98,25 +100,7 @@ public class MyGameScript : MonoBehaviour, JackpotRising.ContestListener {
         JackpotRising.RegisterListener(this);
     }
 
-    // (OPTIONAL) Callback when the Jackpot Rising overlay appears and takes control over the application, pausing the main Unity thread while active.
-    public void OnSDKFocused(){}
-
-    // (OPTIONAL) Callback when the player cancels the tournament offer shown from calling JackpotRising.Show();
-    public void OnDeclineContestOffer(){}
-
-    // (OPTIONAL) Callback when contest information is loaded and determines what the state of the tournament is. See JackpotRising.CONTEST_STATUS_ constants for the states and values.
-    public void OnContestLoaded(int code){}
-
-    // (OPTIONAL) Callback when the Jackpot Rising window is closed with the X button or tournament offer is declined. Unity resumes control of the application when this happens.
-    public void OnClosedSDK(){}
-  
-    // (OPTIONAL) Callback when a player is entering an ad-supported tournament (configured within your tournament settings on Homebase) and doesn't have any attempts remaining. This signals for you to start an ad, and after it finishes respond with JackpotRising.SubmitAdSuccess(bool) with the state of true or false depending on if the ad was successfully played and rewarded the player with attempts. 
-    public void PlayAd(){}
-
-    // (OPTIONAL) Callback with a message as to why the SDK failed to initialize
-    public void OnFailedToInitSDK(string message){}
-
-    // Covered in the 'Make an Attempt' section below
+    // Covered in the 'Attempts and Scores' section below
     public void StartTournament(long tournamentID, JackpotRising.KeyValues keyvalues) {
         // ...
     }
@@ -125,7 +109,68 @@ public class MyGameScript : MonoBehaviour, JackpotRising.ContestListener {
     void OnStartGameplay() {
         // ...
     }
+
+    // Add optional methods here
+    // Cvered in 'Optional Methods' section below.
 }
+```
+
+#### Optional Methods
+
+These callback methods are triggered on various SDK state changes and error handling.
+
+**OnSDKFocused()**
+
+Callback when the Jackpot Rising overlay appears and takes control over the application, pausing the main Unity thread while active.
+
+```csharp
+public void OnSDKFocused(){}
+
+```
+
+**OnDeclineContestOffer()**
+
+Callback when the player cancels the tournament offer shown from calling `JackpotRising.Show()`
+
+```csharp
+public void OnDeclineContestOffer(){}
+
+```
+
+**OnContestLoaded()**
+
+Callback when contest information is loaded and determines what the state of the tournament is. See `JackpotRising.CONTEST_STATUS_ constants` for the states and values.
+
+```csharp
+public void OnContestLoaded(int code){}
+
+```
+
+**OnClosedSDK()**
+
+Callback when the Jackpot Rising window is closed with the X button or tournament offer is declined. Unity resumes control of the application when this happens.
+
+```csharp
+public void OnClosedSDK(){}
+
+```
+
+**PlayAd()**
+
+Callback when a player attempts to start [Ad Supported Tournaments](unity/guides?id=ad-supported-tournaments)
+
+```csharp
+public void PlayAd(){}
+
+```
+
+**OnFailedToInitSDK()**
+
+Callback with a message as to why the SDK failed to initialize
+
+```csharp
+public void OnFailedToInitSDK(string message){}
+
 ```
 
 Please note that when the **Trigger Button** and **ContestListener** are in place you may encounter a slightly different experience depending on where you play:
@@ -177,7 +222,9 @@ JackpotRising.SubmitScore(long score);
 
 ## Build for iOS
 
-!> Ensure you have the iOS Build Component installed in Unity before you begin.
+!> Please ensure you have the iOS Build Component installed in Unity before you begin.
+
+!> Please ensure all required Apple Developer provisioning has been setup within Xcode.
 
 #### 1. Set Build Target to iOS
 
@@ -193,13 +240,13 @@ Open **File > Build Settings > Player Settings > Other Settings > Location Usage
 
 ![Screenshot](media/build-ios/002.png)
 
-This message will be used when prompting for the location persmission, which is required for geofencing Jackpot Rising tournaments.
+This message will be used when prompting for the location persmission, required for geofencing Jackpot Rising tournaments.
 
 #### 3. Ensure Cocopods is Installed
 
 During the build process we'll utilize Cocopods to install some required resources in your Xcode project. This includes the iOS native SDK Overlay UI.
 
-?> See the [Cocoapods website](https://cocoapods.org/ 'target:_blank') for installation intructions
+?> See the [Cocoapods website](https://cocoapods.org/ 'target:_blank') for complete intructions
 
 Enter the following in your terminal to verify Cocopods is installed. If successful a version number will be returned:
 
@@ -215,18 +262,16 @@ Tap the Build button and select a destination for your Xcode project.
 
 ![Screenshot](media/build-ios/003.png)
 
-?> You may close the terminal window Cocopods opened at this time.
+?> You may close the Cocopods terminal window at this time.
 
 
 #### 5. Build to Test Device
-
-!> Please ensure all required Apple Developer provisioning is setup before you proceed
 
 Once the Xcode project is open, you can either build for a physical iOS device or the Simulator. To do this, select your device and tap the Build and Run option near the top-left of the screen.
 
 ![Screenshot](media/build-ios/004.png)
 
-Assuming you've followed all instructions, the SDK should be fully functional within your game. If you encounter any issues please contact [Developer Support](/)
+Congrats! The Jackpot Rising SDK should now be fully functional within your game. Reach out to any of the [Developer Support](/) channels if you encounter issues or need additional support.
 
 ---
 

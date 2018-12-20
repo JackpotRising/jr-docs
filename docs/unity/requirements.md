@@ -6,7 +6,7 @@ Please ensure you've completed entire [Homebase Integration](homebase/integratio
 
 ## Game Randomization Compliance
 
-Please ensure your [Game Randomization](unity/guides?id=game-andomization) meets our required compliance
+Please ensure your game meets our [Game Randomization](unity/guides?id=game-andomization) compliance.
 
 ## Unity
 

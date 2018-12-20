@@ -14,10 +14,11 @@ This serves as the technical documentation for the Jackpot Rising platform.
 * Point your browser towards: `http://localhost:3000/`
 
 *Optionally*
-* [Install and use the Docsify CLI](https://github.com/docsifyjs/docsify-cli) (include auto-refresh)
+* [Install the Docsify CLI](https://github.com/docsifyjs/docsify-cli) (include auto-refresh)
+* Browse to the root of the project: `cd jr-docs`
 * Run via `docsify serve ./docs`
 * Point your browser towards: `http://localhost:3000/`
 
 ## Support
 
-Contact support@jackpotrising.com for further support.
+Contact support@jackpotrising.com

@@ -22,7 +22,7 @@ JackpotRising.GetRandomRange(int low, int high);
 
 #### Seed Randomized
 
-As long as the calls are made in the same order, they will produce the same ‘randomized’ values for every player playing in the same tournament. You can specify your own seed using:
+As long as the calls are made in the same order, they will produce the same ‘randomized’ values for every player playing in the same tournament. You can specify your own seed by replacing `seedVal`:
 
 ```csharp
 public void StartTournament(long seedVal, ...)
@@ -36,7 +36,7 @@ public void StartTournament(long seedVal, ...)
 
 ## Tournament Parameters
 
-Jackpot Rising tournaments may provide key/value data (aka parameters) at the start of each attempt. Each key/value pair is unique per tier. You may provide an unlimited amount of parameters per tier. If you wish to have the same parameters for all tiers in a particular tournament, then please ensure you copy/paste the key/value data to each tier tab.
+Jackpot Rising tournaments may provide key/value data (aka parameters) at the start of each attempt. Each key/value pair is unique per tier. You may provide an unlimited amount of parameters per tier. If you wish to have the same parameters for all tiers in a particular tournament, then please copy/paste the same key/value data to each tier tab.
 
 ![Screenshot](media/parameters/001.png)
 
@@ -47,7 +47,7 @@ This feature is only limited by your imagination! Some example use-cases might i
 - Change mechanics of the gameplay, such as game speed
 - Set the game level that each player participates in, either per tournament or per tier
 
-Once the Jackpot Rising SDK plugin is installed and configured, you can receive the parameter data from the SDK Plugin via the following method:
+Once the Jackpot Rising SDK plugin is installed and configured, you can receive the parameter data from the SDK Plugin via `JackpotRising.KeyValues keyvalues` as displayed below:
 
 ```csharp
 public void StartTournament(long tournamentID, JackpotRising.KeyValues keyvalues)
@@ -75,7 +75,7 @@ This requires a bit more setup but allows you to integrate with any Unity-suppor
 
 #### 1. Enable Ad Support for a Tournament
 
-When creating your tournament within Homebase, ensure you've enabled the **Ad Support** option within the Tier and Parameter options.
+When creating your tournament within Homebase, ensure you've enabled the **Ad Support** option from the Tier and Parameter options.
 
 ![Screenshot](media/ads/001.png)
 
@@ -96,7 +96,7 @@ This is the number of attempts a player will be rewarded after viewing an ad.
     }
 ```
 
-The [The Tournament Listener](unity/integration?id=the-tournament-listener) provides a `PlayAd()` callback, which will be called by the Jackpot Rising SDK when a player is attempting to initiate an ad-supported tournament or tier. This is where you should initiate your integrated ad network.
+The [The Tournament Listener](unity/integration?id=optional-methods) provides a `PlayAd()` callback, which will be called by the Jackpot Rising SDK when a player is attempting to initiate an ad-supported tournament or tier. This is where you should initiate your integrated ad network.
 
 ?> The process is demonstrated and logged in the Unity editor's Play mode through a JRSimulator, which allows you to quickly debug the process.
 
@@ -113,9 +113,9 @@ Once the ad has been triggered, notify the SDK of success or failure via:
 
 Once your game notifies the SDK of the ad success/failure, the player will once again see the Jackpot Rising tournament listing and will be notified if, and how many, attempts they just received for watching the ad.
 
-> Since these are reward ads, the ads *should not* be skipped. However, this depends entirely on your ad network and configuration. Jackpot Rising does not control the ad, but rather ensures the player receives their attempts from successfully watching an ad.
+> Since these are reward ads, the ads should NOT be skipped. However, this depends entirely on your ad network and configuration. Jackpot Rising does not control the ad, but rather ensures the player receives their attempts from successfully watching an ad.
 
 #### 4. Starting an Attempt
 
-The standard [attempt process](unity/integration?id=make-an-attempt) will be used from this point forward.
+The standard [Attempts and Scores](unity/integration?id=attempts-and-scores) process will be used from this point forward.
  The player may choose to use an attempt and begin the tournament, which will call `StartTournament()` as normal.

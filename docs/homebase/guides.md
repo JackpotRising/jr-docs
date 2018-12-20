@@ -2,7 +2,7 @@
 
 ## Submit Game for Review
 
-All games using the Jackpot Rising platform must be approved by a member of our staff. Approval times can vary, but can usually be vereid within 24 hours.
+All games using the Jackpot Rising platform must be approved by a member of our staff. Approve will typically occur within 24 hours of submission. Contact <support@jackpotrising.com> if you need to expedite this process.
 
 !> The test build that you submit to Jackpot Rising for approval must be the same version (i.e 1.0 or 1.1) as the production build that you are submitting to Apple.
 
@@ -30,9 +30,9 @@ Once you have created a test tournament, return to the Game Details page and tap
 
 1. Select the platform(s) that you will be submitting for the game.
 2. Provide the version number and app details for the build that you are submitting.
-3. For iOS: Send an invitation through Testflight or Hockeyapp to developer@jackpotrising.com
+3. For iOS: Send an invitation through Testflight to <developer@jackpotrising.com>
 
-> Your point of contact (set within Homebase > Account) will be notified if your game is approved or denied. If denied, a reason will be provided. If accepted, the game will then appear in the Jackpot Rising games library.
+> Your point of contact email (set within Homebase > Account) will be notified once the approval is complete. If denied, a reason will be provided. If accepted, the game will then appear in the Jackpot Rising games library.
 
 ---
 

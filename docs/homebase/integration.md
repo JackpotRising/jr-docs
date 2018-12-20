@@ -12,7 +12,7 @@
 
 ## Add a Game
 
-Login to [Homebase](https://homebase.jackpotrising.com ':target=_blank') and tap the *Add Game* button at the top-left of the page. Provide all required information.
+Login to [Homebase](https://homebase.jackpotrising.com ':target=_blank') and tap the **Add Game** button at the top-left of the page. Provide all required information.
 
 ![Screenshot](media/game/002.png)
 
@@ -22,7 +22,7 @@ Jackpot Rising can use this within the SDK to brand your game on the Jackpot Ris
 
 ![Screenshot](media/game/003.png)
 
-?> You can select multiple *Genres* or *Platforms* by holding down **Control/Command**
+?> You can select multiple Genres or Platforms by holding down **Control/Command**
 
 #### 2. Platforms
 
@@ -30,7 +30,7 @@ Provide additional details per each enabled platform.
 
 ![Screenshot](media/game/004.png)
 
-Selecting iOS will prompt you for your game's *iOS store link* and its *iOS bundle*
+> Selecting iOS will prompt you for your game's **store link** and **bundle**
 
 #### 3. Media
 
@@ -57,7 +57,7 @@ Provide your game's media, including: a video trailer, icon, and backsplash that
 
 #### 4. Notificiations (optional)
 
-You can choose to optionally integrate a [OneSignal](https://onesignal.com/ ':target=_blank') account to enable Push Notifications for your game.
+You may optionally integrate your [OneSignal](https://onesignal.com/ ':target=_blank') account to enable Push Notifications for your game.
 
 ![Screenshot](media/game/007.png)
 
@@ -70,7 +70,7 @@ You can choose to optionally integrate a [OneSignal](https://onesignal.com/ ':ta
 * Player was knocked out of the money
 * Tournament completed
 
-> By default, only the *new tournaments* notification is enabled for players. We limit the number of notifications to reduce spam
+> By default only the **new tournaments** notification is enabled for players. We limit the number of notifications to reduce spam and encourage engagement
 
 #### 5. Currency (optional)
 
@@ -80,13 +80,13 @@ If you plan to use a custom game currency in place of real money, provide your a
 
 #### 6. Create Game
 
-Tap the *Create Game* button to generate the game record within Jackpot Rising.
+Tap the **Create Game** button to complete this process.
 
 ---
 
 ## Generate SDK Credentials
 
-Each game has a unique set of SDK credentials that help authenticate and connect it to the Jackpot Rising platform. Follow the instructions below to retrieve a game's SDK credentials.
+Each game has a unique set of SDK credentials that help authenticate and connect it to the Jackpot Rising platform. Follow the instructions below to retrieve your game's SDK credentials.
 
 Start by tapping the **Games** navigation section.
 
@@ -129,17 +129,17 @@ There are several key differences between Standard and Test Mode Tournaments:
 
 This is a unique identifier for the tournament which is visible to players.
 
-> Avoid using "Tournament" in the name if possible. DO NOT include "Tournament" for recurring tournaments as this will be appended automatically.
+> Avoid using "Tournament" in the name if possible. DO NOT include "Tournament" for recurring tournaments. This will be appended automatically.
 
 #### 2. Currency
 
-Set the currency settings and initial jackpot amount for your tournament.
+Set the currency type and initial jackpot amount for your tournament.
 
 ![Screenshot](media/tournament/002.png)
 
 **Currency Mode**
 
-* Real Money - all money in/out will utilize real currency in USD
+* Real Money - all money in/out will utilize US Dollars (USD)
 * Game Currency - this utilizes a custom game currency (ex: gold coins)
 
 ?> Game Currency is configured in your Game settings
@@ -150,7 +150,7 @@ The starting jackpot amount. This will be billed to your account the moment the 
 
 #### 3. Tiers & Parameters
 
-Settings for configuring attempts, jackpot splits, customizable game parameters, and rules.
+Configure jackpot splits, set game parameters, rules, and more.
 
 ![Screenshot](media/tournament/003.png)
 
@@ -199,11 +199,11 @@ The win condition per tier.
 
 Shows the payout split for each awardee per tier. When a Custom distribution is selected it allows you to define each percentage amount.
 
-!> Please make sure that the actual amount being paid out to each tier is sufficient. If you have too many tiers or payout spots enabled for the current starting jackpot, then you could run into an issue where a payout spot receives less than the attempt fee for that tier! If you run into this issue, then please reduce the number of tiers/payouts or increase the starting jackpot amount.
+!> Please ensure the the payout for each tier is sufficient. If you have too many tiers or payout spots enabled for the current starting jackpot, then payout spot may receive less than the attempt fee for that tier. If this occurs please reduce the number of tiers/payouts or increase the starting jackpot amount.
 
 #### 5. Duration
 
-Configures the duration of your tournament.
+Configure the duration of your tournament.
 
 ![Screenshot](media/tournament/005.png)
 
@@ -215,6 +215,6 @@ The tournament has a defined start and end date/time
 
 Recreates the tournament repeatedly at defined interval (ex: daily). The tournament name will be auto-generated for Recurring tournaments.
 
-> To stop a recurring tournament: view your game's list of tournaments, select the Recurring tab, the tap the Delete Template button on the tournament you wish to stop.
+> To stop a recurring tournament, view your game's list of tournaments, select the Recurring tab and press the Delete Template button on the tournament you wish to terminate.
 
 ![Screenshot](media/tournament/006.png)
