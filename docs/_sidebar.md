@@ -9,6 +9,7 @@
         - [Submit Game for Review](homebase/guides?id=submit-game-for-review)
         - [Monitoring Tournaments](homebase/guides?id=monitoring-tournaments)
         - [Managing Account Funds](homebase/guides?id=managing-account-and-funds)
+        - [Custom Game Currency](homebase/guides?id=custom-game-currency)
 
 - Unity SDK Integration
 
