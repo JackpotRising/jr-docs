@@ -118,7 +118,7 @@ Below are additional resources and information for getting the most out of your 
 
 **Can I mix Full, Partial and Manual Process integration methods for multiple networks?**
 
-Yes. Just notify <support@jackpotrising.com> of any and all ad networks you plan to use for rewarded ads. You will be charged ad detailed in [Revenue Share Methods](unity/ads?revenue-share-methods).
+Yes. Just notify <support@jackpotrising.com> of any and all ad networks you plan to use for rewarded ads. You will be charged as detailed in [Revenue Share Methods](unity/ads?revenue-share-methods).
 
 **What if there is a discrepancy between the ad network's report and Jackpot Rising ad completion count?**
 
