@@ -165,7 +165,7 @@ Configure jackpot splits, set game parameters, rules, and more.
 
 Replaces free entry tiers with ad supported tiers. This allows players to watch video pre-roll ads, which unlock a set number of attempts. A Unity-supported ad network must be integrated to use this feature.
 
-?> See [Ad Supported Tournaments](unity/guides?id=ad-supported-tournaments) for more information.
+?> See [How It Works](unity/guides?id=how-it-works) for additional information about ad supported tournaments.
 
 **Tiers**
 

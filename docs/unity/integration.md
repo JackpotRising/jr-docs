@@ -157,7 +157,7 @@ public void OnClosedSDK(){}
 
 **PlayAd()**
 
-Callback when a player attempts to start [Ad Supported Tournaments](unity/guides?id=ad-supported-tournaments)
+Callback when a player attempts to start [Integrating Ad Support](unity/guides?id=ad-integration)
 
 ```csharp
 public void PlayAd(){}

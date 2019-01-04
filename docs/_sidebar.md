@@ -20,10 +20,14 @@
         - [Attempts and Scores](unity/integration?id=attempts-and-scores)
         - [Build for iOS](unity/integration?id=build-for-ios)
         - [Build for Android](unity/integration?id=build-for-android)
+    - Ad Support
+        - [How It Works](unity/ads?id=how-it-works)
+        - [Revenue Share Methods](unity/ads?id=revenue-share-methods)
+        - [Ad Integration](unity/ads?id=ad-integration)
+        - [Additional Support](unity/ads?id=additional-support)
     - Guides
         - [Game Randomization](unity/guides?id=game-andomization)
         - [Tournament Parameters](unity/guides?id=tournament-parameters)
-        - [Ad Supported Tournaments](unity/guides?id=ad-supported-tournaments)
 
 <!--
 - Unreal SDK Integration
