@@ -4,13 +4,13 @@
 
 #### 1. Initialize the Podfile inside of the project root directory
 
-```shell
+```bash
 pod init
 ```
 
 #### 2. Edit the newly created Podfile and add this into it
 
-```shell
+```bash
 platform :ios, '9.0'
   target 'My-Game' do // My-Game should be the name of your project in Xcode
   pod 'JackpotRising'
@@ -18,7 +18,7 @@ end
 ```
 #### 3. Save the Podfile and then install the pod
 
-```shell
+```bash
 pod install
 ```
 
@@ -27,7 +27,7 @@ Open the .xcworkspace file and **NOT** the .xcodeproj file
 
 #### 5. Update SDK *(optional)*
 
-```shell
+```bash
 pod update JackpotRising
 ```
 
