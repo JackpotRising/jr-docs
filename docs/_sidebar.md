@@ -30,6 +30,16 @@
         - [Game Randomization](unity/guides?id=game-andomization)
         - [Tournament Parameters](unity/guides?id=tournament-parameters)
 
+- iOS Native Integration
+
+  - [Requirements](ios/requirements?id=requirements)
+  - Integration
+    - [Initialize the Podfile](ios/integration?id=cocopods-initialization)
+    - [Trigger the SDK](ios/integration?id=trigger-the-sdk)
+    - [The Tournament Listener](ios/integration?id=the-tournament-listener)
+    - [Attempts and Scores](ios/integration?id=attempts-and-scores)
+    - [Compiling Settings](ios/integration?id=compiling-settings)
+
 <!--
 - Unreal SDK Integration
 - Native iOS SDK Integration
