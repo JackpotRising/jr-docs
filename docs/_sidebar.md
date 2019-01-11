@@ -1,11 +1,4 @@
-- Support
-
-    - [General](questions/general)
-    - [Account](questions/account)
-    - [Funds](questions/funds)
-    - [Tournaments](questions/tournaments)
-
-<!-- - Homebase
+- Homebase
 
     - Integration
         - [Register](homebase/integration?id=register)
@@ -39,21 +32,20 @@
 
 - iOS Native Integration
 
-  - [Requirements](ios/requirements?id=requirements)
-  - Integration
-    - [Initialize the Podfile](ios/integration?id=cocopods-initialization)
-    - [Trigger the SDK](ios/integration?id=trigger-the-sdk)
-    - [The Tournament Listener](ios/integration?id=the-tournament-listener)
-    - [Attempts and Scores](ios/integration?id=attempts-and-scores)
-    - [Compiling Settings](ios/integration?id=compiling-settings)
+    - [Requirements](ios/requirements?id=requirements)
+    - Integration
+        - [Initialize the Podfile](ios/integration?id=cocopods-initialization)
+        - [Trigger the SDK](ios/integration?id=trigger-the-sdk)
+        - [The Tournament Listener](ios/integration?id=the-tournament-listener)
+        - [Attempts and Scores](ios/integration?id=attempts-and-scores)
+        - [Compiling Settings](ios/integration?id=compiling-settings)
 
 <!--
 - Unreal SDK Integration
-- Native iOS SDK Integration
 - Native Android SDK Integration
 -->
 
 - Additional Resources
 
     - [Official Website](https://www.jackpotrising.com ':target=_blank')
-    - [Developer Documentation](https://docs.jackpotrising.com ':target=_blank')
+    - [Support](https://support.jackpotrising.com ':target=_blank')

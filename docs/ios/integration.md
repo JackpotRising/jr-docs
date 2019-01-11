@@ -39,15 +39,12 @@ The SDK is based on a singleton pattern, meaning there is only 1 instance of the
 ```swift
 override func viewDidLoad() {
     super.viewDidLoad()
-
     // Do any additional setup after loading the view, typically from a nib.
-
     JackpotRising.sharedInstance.initWithClientCredentials("YOUR-CLIENT-ID", clientSecret: "YOUR-CLIENT-SECRET")
     JackpotRising.sharedInstance.delegate = self
     JackpotRising.sharedInstance.pointingURL = .production
     JackpotRising.sharedInstance.testMode = true // This is for enabling/disabling GPS check. Set this to true when ready for release
     JackpotRising.sharedInstance.apiMode = .test // This is for setting test mode for contests. Set this to production when ready for release
-
 }
 ```
 
@@ -76,23 +73,18 @@ class ViewController: UIViewController, UITextFieldDelegate, JackpotRisingDelega
         print(data)
         // This is where you want to initiate your gameplay from!
     }
-
     func fetchLocationStatus(_ status: Bool) {
         print(status)
     }
-
     func initialPopupCancelled(){
         print("SDK cancelled")
     }
-
     func sdkClosed() {
         print("SDK closed")
     }
-
     func sdkFailedToInitialize(_ message: String) {
         print(message)
     }
-
     func playAd() {
         print("play contest ad")
         // Play your own ad network and then call contestAdWatched with the success or failure flag
@@ -101,15 +93,12 @@ class ViewController: UIViewController, UITextFieldDelegate, JackpotRisingDelega
 ​
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view, typically from a nib.
-
         JackpotRising.sharedInstance.initWithClientCredentials("YOUR-CLIENT-ID", clientSecret: "YOUR-CLIENT-SECRET")
         JackpotRising.sharedInstance.delegate = self
         JackpotRising.sharedInstance.pointingURL = .production
         JackpotRising.sharedInstance.testMode = true // This is for enabling/disabling GPS check. Set this to true when ready for release
         JackpotRising.sharedInstance.apiMode = .test // This is for setting test mode for contests. Set this to production when ready for release
-
     }
 ​
 }
