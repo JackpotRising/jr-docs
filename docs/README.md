@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-# Jackpot Rising Support
-
-(intro)
-=======
 # Jackpot Rising Platform Documentation
 
 This documentation site provides a comprehensive set of of integration setps and guides to help you integrate the Jackpot Rising platform as quickly as possible.
->>>>>>> cc0fc2abaecc6406eedaa58230ba8b2495e9b58c
 
 ## Developer Support
 
