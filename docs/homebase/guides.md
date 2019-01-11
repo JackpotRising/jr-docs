@@ -75,3 +75,48 @@ Start by tapping the **View** button on the left side of the page.
 Here you may add or withdraw funds from your account and view a transaction history and recent earnings.
 
 ![Screenshot](media/account/003.png)
+
+---
+
+## Custom Game Currency
+
+In addition to real money tournaments, you may also fund and reward tournmanets with custom game currency (ex: gold coins). This allows players to purchase additional content from within your in-game shop, for example.
+
+> Please note, you may add as many game currencies as you wish per game.
+
+#### Add a Game Currency
+
+Once you have [added a game](homebase/integration?id=add-a-game) within Homebase, browse to the game details, then tap the **Add New Currency** button.
+
+![Screenshot](media/currency/001.png)
+
+Select the **Currency** tab to provide the required resources.
+
+![Screenshot](media/currency/002.png)
+
+**Webhook URL**
+
+When a tournament is completed and settled, Jackpot Rising will make an HTTP Post to the API endpoint provided. The call payload will include all relevant information needed to reward your players. This includes: ranks, player information, scores, and jackpot amount(s).
+
+?> Contact <support@jackpotrising.com> if you require assistance with this process.
+
+**Currency Assets**
+
+- Currency Icon (256x256): a visual representation of your game currency
+- Currency Name: a text-based representation of your game currency (ex: Gold Coins) 
+
+**Available Game Currencies**
+
+Previously created game currencies will be displayed here.
+
+#### Using a Game Currency
+
+When you [Create a Tournament](homebase/integration?id=create-a-tournament) for this game, you will now see the option to select your new game currency.
+
+![Screenshot](media/currency/003.png)
+
+Tournaments utilizing your in-game currency operate the same as real-money tournaments, including support for both tournament tiers and payout distribution.
+
+![Screenshot](media/currency/004.png)
+
+![Screenshot](media/currency/005.png)

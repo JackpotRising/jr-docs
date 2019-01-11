@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 # Jackpot Rising - Support Site
 
 This serves as the support site for the Jackpot Rising platform.
+=======
+# Jackpot Rising - Documentation Site
+
+This serves as the technical documentation for the Jackpot Rising platform.
+>>>>>>> cc0fc2abaecc6406eedaa58230ba8b2495e9b58c
 
 * [Built using Docsify](https://docsify.js.org/)
 * [Docsify on Github](https://github.com/docsifyjs/docsify/)
