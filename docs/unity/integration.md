@@ -48,7 +48,7 @@ Browse to **Windows > Jackpot Rising > Edit Settings** to view the SDK configura
 - Documentation: launches this documentation site
 - Developer/Production Client ID and Secret: these are covered in the 'Enter SDK Credentials' step below
 - Checkbox Options: Hover over the (?) mark for more details. Tap the Production option when you're ready for release.
-- Simulate Key/Value parameters : simulates [Tournament Parameters](unity/guides?id=tournament-parameters) 
+- Simulate Key/Value parameters : simulates [Tournament Parameters](unity/guides?id=tournament-parameters)
 
 #### 5. Enter SDK Credentials
 
@@ -104,7 +104,7 @@ public class MyGameScript : MonoBehaviour, JackpotRising.ContestListener {
     public void StartTournament(long tournamentID, JackpotRising.KeyValues keyvalues) {
         // ...
     }
-   
+
     // Insert custom game logic here
     void OnStartGameplay() {
         // ...
@@ -200,7 +200,7 @@ public void StartTournament(long tournamentID, JackpotRising.KeyValues keyvalues
     GameEventsManager.level = keyvalues.GetInt("level");
     GameEventsManager.levelName = keyvalues.GetString("name");
     GameEventsManager.speed = keyvalues.GetFloat("gameSpeed");
-    
+
     // Handle any game specific logic here (change scenes, etc)
     OnStartGameplay();
 }
@@ -246,7 +246,7 @@ This message will be used when prompting for the location persmission, required 
 
 During the build process we'll utilize Cocopods to install some required resources in your Xcode project. This includes the iOS native SDK Overlay UI.
 
-?> See the [Cocoapods website](https://cocoapods.org/ 'target:_blank') for complete intructions
+?> See the [Cocoapods website](https://cocoapods.org/ 'target:_blank') for complete instructions
 
 Enter the following in your terminal to verify Cocopods is installed. If successful a version number will be returned:
 
@@ -258,7 +258,7 @@ pod --version
 
 Tap the Build button and select a destination for your Xcode project.
 
-> During each build process you will see a terminal window open automatically. This is Cocopods installing the required resources. Once complete the Xcode project will open automatically for you. Otherwise double-click 'Unity-iPhone.xcodeproj'.
+> During each build process you will see a terminal window open automatically. This is Cocopods installing the required resources. Once complete the Xcode project will open automatically for you. Otherwise double-click 'Unity-iPhone.xcworkspace' file.
 
 ![Screenshot](media/build-ios/003.png)
 
