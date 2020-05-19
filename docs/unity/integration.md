@@ -44,7 +44,7 @@ Browse to **Windows > Jackpot Rising > Edit Settings** to view the SDK configura
 
 **Options Include**
 
-- Developer Dashboard: lauches [Homebase](https://homebase.jackpotrising.com 'target:_blank')
+- Developer Dashboard: launches [Homebase](https://homebase.jackpotrising.com 'target:_blank')
 - Documentation: launches this documentation site
 - Developer/Production Client ID and Secret: these are covered in the 'Enter SDK Credentials' step below
 - Checkbox Options: Hover over the (?) mark for more details. Tap the Production option when you're ready for release.
@@ -240,15 +240,15 @@ Open **File > Build Settings > Player Settings > Other Settings > Location Usage
 
 ![Screenshot](media/build-ios/002.png)
 
-This message will be used when prompting for the location persmission, required for geofencing Jackpot Rising tournaments.
+This message will be used when prompting for the location permission, required for geofencing Jackpot Rising tournaments.
 
-#### 3. Ensure Cocopods is Installed
+#### 3. Ensure Cocoapods is Installed
 
-During the build process we'll utilize Cocopods to install some required resources in your Xcode project. This includes the iOS native SDK Overlay UI.
+During the build process we'll utilize Cocoapods to install some required resources in your Xcode project. This includes the iOS native SDK Overlay UI.
 
 ?> See the [Cocoapods website](https://cocoapods.org/ 'target:_blank') for complete instructions
 
-Enter the following in your terminal to verify Cocopods is installed. If successful a version number will be returned:
+Enter the following in your terminal to verify Cocoapods is installed. If successful a version number will be returned:
 
 ```
 pod --version
@@ -258,11 +258,11 @@ pod --version
 
 Tap the Build button and select a destination for your Xcode project.
 
-> During each build process you will see a terminal window open automatically. This is Cocopods installing the required resources. Once complete the Xcode project will open automatically for you. Otherwise double-click 'Unity-iPhone.xcworkspace' file.
+> During each build process you will see a terminal window open automatically. This is Cocoapods installing the required resources. Once complete the Xcode project will open automatically for you. Otherwise double-click 'Unity-iPhone.xcworkspace' file.
 
 ![Screenshot](media/build-ios/003.png)
 
-?> You may close the Cocopods terminal window at this time.
+?> You may close the Cocoapods terminal window at this time.
 
 
 #### 5. Build to Test Device
@@ -277,4 +277,4 @@ Congrats! The Jackpot Rising SDK should now be fully functional within your game
 
 ## Build for Android
 
-?> Jackpot Rising for Android is still in developement. Please check back soon.
+?> Jackpot Rising for Android is still in development. Please check back soon.
